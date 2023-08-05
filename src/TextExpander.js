@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function TextExpander({
   children,
@@ -13,6 +14,9 @@ export default function TextExpander({
   const buttonStyle = {
     color: buttonColor,
     cursor: "pointer",
+  };
+  TextExpander.propTypes = {
+    collapsedNumWords: PropTypes.number,
   };
   const [isExpanded, setIsExpanded] = useState(expanded);
 
